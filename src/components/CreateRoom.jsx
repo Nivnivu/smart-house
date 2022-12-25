@@ -32,7 +32,7 @@ const CreateRoom = () => {
        <button className='addRoomBtn' onClick={() => {addRoom(); setRoomName(''); setRoomColor(''); setRoomType('');}}>Add Room</button>
        {<div className="error"> {errorMessage} </div>}
        <Link to={'/'}>
-      <button onClick={() => {setErrorMessage(''); setScreen(0)}}>HomePage</button>
+      <button className='homePgBtn' onClick={() => {setErrorMessage(''); setScreen(0)}}>HomePage</button>
     </Link>
        </div> 
   )

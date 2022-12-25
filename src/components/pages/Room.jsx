@@ -114,7 +114,7 @@ function Room() {
             return (
                 <>
         {thisRoom.devices.map(({name},index) =>
-       <button style={{backgroundColor: thisRoom.devices[index].switch ? 'green' : 'red'}} className="devices" id={index} key={index} onClick={()=>{updateThisRoom(index)}} >{name}</button>)}
+       <button style={{backgroundColor: thisRoom.devices[index].switch ? '#23C552' : ' #F84F31'}} className="devices" id={index} key={index} onClick={()=>{updateThisRoom(index)}} >{name}</button>)}
                     <br />
                   <div className='error'>{errorMessage}</div>  
                     <br />
@@ -139,7 +139,7 @@ function Room() {
     {switchPages()}
     <br />
     <Link to={'/'}>
-      <button onClick={() => setErrorMessage('')}>HomePage</button>
+      <button onClick={() => setErrorMessage('')} className="homePgBtn">HomePage</button>
     </Link>
 </div>  )
 }

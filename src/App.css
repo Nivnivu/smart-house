@@ -1,38 +1,72 @@
 .App {
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+ display: flex;
+ justify-content: center;
+ align-content: space-between;
+ gap: 10px 20px;
+ flex-wrap: wrap;
+ width: 800px;
+ margin: auto;
+}
+.item{
+  width: 250px;
+  height: 120px;
+  border: 1px solid #FF7000;
+
+}
+.addBtn {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  font-size: 4rem;
+  background-color: #10A19D;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1{
+  color: #10A19D;
+}
+.error{
+  color: tomato;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+input, select {
+  font-size: 1.6rem;
+  margin: 5px;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+select{
+  width: 100%;
+}
+
+datalist option:hover{
+  background-color: lightblue;
+}
+.addRoomBtn, .addDeviceBtn{
+  margin: 20px;
+  font-weight: bold;
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  background-color: #10A19D;
+}
+
+.devices{
+  margin: 3px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.deviceDiv {
+  width: 450px;
+  margin: auto;
 }

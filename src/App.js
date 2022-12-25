@@ -25,17 +25,23 @@ function App() {
   
   const addRoom = () => {
     if (rooms.find(room => room.name === roomName) != undefined){
-      setErrorMessage("Room name allready exist !")
-    } else if (roomType === "" && roomName === "" && roomColor === '' ) {
+      setErrorMessage("Room name allready exist !");
+
+    } else if (roomType === "" || roomName === "" || roomColor === '' ) {
       setErrorMessage("One Or More Values Are Empty !")
+ 
     } else {
-      setIndex(index + 1)
-      setRooms(current => [...current,{id: index, type: roomType, name: roomName, color: roomColor , devices: [] }])
-      setScreen(0)
+      setIndex(index + 1);
+      setScreen(0);
+      setRooms(current => [...current,{id: index, type: roomType, name: roomName, color: roomColor , devices: [] }]);
+
+
     } 
      
 }
-
+useEffect(() => {
+  setErrorMessage('')
+}, [roomName,roomType,roomColor]);
 
 
   console.log(rooms.find(room => room.name === roomName))

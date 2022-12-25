@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './components/pages/HomePage.jsx'
 import Room from './components/pages/Room'
@@ -44,14 +44,14 @@ function App() {
     <div className="App">
      <RoomsContext.Provider value={{userId,addRoom, setDevices,devices,rooms,setRooms,screen,setScreen,roomType,setRoomType,roomName,setRoomName,roomColor,setRoomColor,errorMessage,setErrorMessage,index,setIndex}}>
      <Header />
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
 
           <Route path='/' element={<HomePage/>}/>
             <Route path="/rooms/:userId" element={<Room/>}/>
             
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
         </RoomsContext.Provider>
     </div>
   );
